@@ -1,5 +1,5 @@
 # Este Script hace una copia, en este caso de las bases de datos
-# respaldadas por Mongo en un servidor Windows. 
+# respaldadas por Mongo o SQL en un servidor Windows. 
 # La idea es comprimir cada una de las bases de datos exportadas
 # y llevar los .zip a un repositorio.
 
@@ -15,7 +15,7 @@
 $CurrentDate = Get-Date
 $dateString = $currentDate.ToString("yyyy-dd-MM")
 
-# Definir ruta donde está el backup de Mongo y 
+# Definir ruta donde está el backup de Mongo o SQL y 
 # la ruta donde se van a comprimir las bases de datos.
 # Esta ultima ruta también será la carpeta base de Git 
 
@@ -26,6 +26,7 @@ $git_dir = "G:\MyGitDir\"
 # Borrar carpeta en caso de que exista
 # Para crearla de nuevo
 Remove-Item -Path $git_dir -Recurse -Force
+
 New-Item -Type Directory -Path $git_dir
 cd $git_dir
 
@@ -54,9 +55,15 @@ foreach ($file in $filesSend) {
 	git add $file
 	git commit -am "Backup $dateString"
 	git remote add MyRepo "https://USER:TOKEN@URLOfYourRepo"
+	# Ejemplo: https://RobertoM:qwpoeirkldjfalkdfjaf@dev.azure.com/MyOrganization/MyProject/_git/MyRepo
 	git branch --set-upstream-to MyRepo/backup # backup aqui es una rama
 	git push --set-upstream MyRepo backup -f
 }
+
+
+cd \
+
+Remove-Item -Path $git_dir -Recurse -Force
 
 Get-Date
 exit
