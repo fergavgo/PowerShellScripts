@@ -47,6 +47,9 @@ foreach ($folder in $folders) {
 cd $git_dir
 git init
 
+# El repositorio destino tambien podria llevar como 
+# nombre la fecha:
+# git checkout -t -b $dateString
 git checkout -t -b backup
 
 $filesSend = Get-ChildItem -Path $git_dir -File
