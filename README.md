@@ -1,4 +1,4 @@
-# PowerShell Scripts <a href="https://learn.microsoft.com/es-es/powershell/?view=powershell-7.3" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/gist/Xainey/d5bde7d01dcbac51ac951810e94313aa/raw/6c858c46726541b48ddaaebab29c41c07a196394/PowerShell.svg" alt="PowerShell" width="40" height="40"/></a>
+# PowerShell Scripts <a href="https://learn.microsoft.com/es-es/powershell/?view=powershell-7.3" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/gist/Xainey/d5bde7d01dcbac51ac951810e94313aa/raw/6c858c46726541b48ddaaebab29c41c07a196394/PowerShell.svg" alt="PowerShell" width="25" height="25"/></a>
 Useful PowerShell Scripts for several scenarios
 
 
