@@ -10,3 +10,5 @@ No se recomienda usarse en ambientes productivos, ya que el usuario/token pueden
 # Monitor RAM CPU AppPool
 Script para obtener el estado de un AppPool en IIS (memoria RAM y uso de CPU). Lo lleva a un archivo de log.
 
+# Backup Azure Pipelines and Libraries
+Este escript genera un backup a yaml o json de los Pipelines de Azure creados usando el asistente clásico, además de las librerías de variables indicadas. 
