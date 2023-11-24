@@ -3,12 +3,17 @@ Useful PowerShell Scripts for several scenarios
 
 
 # Backup to Git
-Este script comprime carpetas (en este caso son carpetas con backups de bases de datos Mongo) y envía los archivos a un repositorio Git.
-No se recomienda usarse en ambientes productivos, ya que el usuario/token pueden quedar expuestos. Usar con precaución.
+This script compress several folders (backup folders in this case, with database backups in the inside) and send the zip files to a Git repository.
+I don't recommend to use this in production, since it requires a token and could be exposed. Use with caution.
 
 
 # Monitor RAM CPU AppPool
-Script para obtener el estado de un AppPool en IIS (memoria RAM y uso de CPU). Lo lleva a un archivo de log.
+This script get the IIS's AppPools status (memory and CPU) and take it to a log file.
+
 
 # Backup Azure Pipelines and Libraries
-Este escript genera un backup a yaml o json de los Pipelines de Azure creados usando el asistente clásico, además de las librerías de variables indicadas. 
+This one, generates a backup to yaml files or json files from every Azure's Pipeline you created with the classic assistant. Addicionally, it creates a backup for each library (variable group) you select.
+
+
+# IIS Pending Requests
+This is just a While loop that shows you the pending requests the APIs have to attend right now. It refreshes every 5 seconds.
